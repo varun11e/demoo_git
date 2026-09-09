@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame Login - Secure Access</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="flame-background">
+            <div class="flame-layer flame-1"></div>
+            <div class="flame-layer flame-2"></div>
+            <div class="flame-layer flame-3"></div>
+        </div>
+
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Flame Login</h1>
+                <p>Secure access to your account</p>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username or Email</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username or email"
+                        aria-label="Username or email input"
+                        aria-describedby="username-hint"
+                    >
+                    <span id="username-hint" class="form-hint">
+                        We'll never share your email with anyone else.
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            aria-label="Password input"
+                            aria-describedby="password-hint"
+                        >
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            aria-label="Show password"
+                            class="password-toggle"
+                        >
+                            <svg aria-hidden="true" class="eye-icon" viewBox="0 0 24 24">
+                                <path d="M12 4.5c-7 0-11 8-11 8.5s4 8.5 11 8.5c7 0 11-8.5 11-8.5s-4-8.5-11-8.5z"/>
+                                <path d="M12 12.5c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <span id="password-hint" class="form-hint">
+                        Use at least 8 characters with a mix of letters and numbers.
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        Remember me on this device
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Sign In
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="#" class="link">Sign up</a></p>
+                <p><a href="#" class="link">Forgot password?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
